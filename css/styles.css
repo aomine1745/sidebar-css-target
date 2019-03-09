@@ -90,7 +90,8 @@ section{
 }
 .wall-effect{
 	animation: x .3s;
-	z-index: -1;
+	/* change to -1 */
+	/*z-index: 1;*/
 	opacity: 0;
 }
 .wall-none{
