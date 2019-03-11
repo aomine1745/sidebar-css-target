@@ -1,17 +1,15 @@
-const wall = document.querySelector('.wall'),
+const sidenavOverlay = document.querySelector('.sidenav-overlay'),
 x = document.querySelector('.x'),
 hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click', ()=>{
-	wall.classList.remove('wall-none');
-	wall.classList.remove('wall-effect');
+hamburger.addEventListener('click', () => {
+	sidenavOverlay.classList.remove('sidenav-overlay-none');
 });
-wall.addEventListener('click', vanished);
 x.addEventListener('click', vanished);
+sidenavOverlay.addEventListener('click', vanished);
 function vanished(){
-	wall.classList.add('wall-effect');
-	setTimeout(none, 500);
-}
-function none(){
-	wall.classList.add('wall-none');
-	wall.classList.remove('wall-effect');
+	sidenavOverlay.classList.add('sidenav-overlay-vanished');
+	setTimeout(()=>{
+		sidenavOverlay.classList.remove('sidenav-overlay-vanished');
+		sidenavOverlay.classList.add('sidenav-overlay-none');
+	}, 500);
 }
