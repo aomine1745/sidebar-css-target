@@ -94,14 +94,9 @@ section{
 	transition: .3s;
 	opacity: 0;
 	visibility: hidden;
-/*	transition: .3s;
-	opacity: 0;
-	z-index: -1;*/
 }
 #nav:target + .sidenav-overlay {
 	transition: .5s;
 	opacity: 1;
 	visibility: visible;
-/*	opacity: 1;
-animation: show .5s;*/
 }
